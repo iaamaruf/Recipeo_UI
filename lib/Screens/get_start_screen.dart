@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:recipeo/Screens/login_screen.dart';
-import 'package:recipeo/Utilities/Button/default_button.dart';
 import 'package:recipeo/Utilities/Others/start_image.dart';
 
 
@@ -44,21 +43,22 @@ class GetStartScreen extends StatelessWidget {
 
             ),
               const SizedBox(height: 40,),
-            Padding(
-              padding: const EdgeInsets.only(left: 10.0, right: 10, bottom: 35),
-              child: Center(
-                child: DefaultButton(
-                  paddingBottom: 15,
-                  paddingTop: 15,
-                  buttonText: "Get Start",
-                  onTap: (){
-                    Navigator.of(context).pushNamed(LogInScreen.routeName);
-                  },
-                ),
-              ),
+        Padding(
+          padding: const EdgeInsets.only(left: 15.0,right: 15.0),
+          child: SizedBox(
+            width: double.infinity,
+            child: ElevatedButton(
+              child: const Text('Get Start', style: TextStyle(fontSize: 18),),
+              onPressed: () {
+                Navigator.of(context).pushNamed(LogInScreen.routeName);
+              },
             ),
-          ],
+
+          ),
         )
+        ]
+      )
+
       )
     );
   }

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:recipeo/Screens/login_screen.dart';
 import 'package:recipeo/Screens/password_veification_code.dart';
-import 'package:recipeo/Utilities/Button/default_button.dart';
-import 'package:recipeo/Utilities/Form%20field/sign_in_custom_formfield.dart';
+import 'package:recipeo/Screens/verify_OTP.dart';
+import 'package:recipeo/Utilities/Form%20field/Input_formfield.dart';
 
 class PasswordRecoveryScreen extends StatefulWidget {
   static const String routeName = "PasswordRecoveryScreen";
@@ -50,7 +51,7 @@ class _PasswordRecoveryScreenState extends State<PasswordRecoveryScreen> {
                     children: <Widget>[
                       const SizedBox(height: 20,),
 
-                      LoginCustomInputField(
+                      InputTextField(
                         controller: emailTextController,
                         hintText: "Email or phone number",
                         prefixIcon: const Icon(Icons.email_outlined, size: 25,),
@@ -63,16 +64,16 @@ class _PasswordRecoveryScreenState extends State<PasswordRecoveryScreen> {
             ),
             const SizedBox(height: 40,),
             Padding(
-              padding: const EdgeInsets.only(left: 10.0, right: 10, bottom: 10),
-              child: Center(
-                child: DefaultButton(
-                  paddingBottom: 15,
-                  paddingTop: 15,
-                  buttonText: "Sign In",
-                  onTap: (){
-                    Navigator.of(context).pushNamed(PasswordVerificationCodeScreen.routeName);
+              padding: const EdgeInsets.only(left: 15.0,right: 15.0),
+              child: SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  child: const Text('Sign in', style: TextStyle(fontSize: 18),),
+                  onPressed: () {
+                      Navigator.of(context).pushNamed(VerifyOtpScreen.routeName);
                   },
                 ),
+
               ),
             ),
             const SizedBox(height: 20,),

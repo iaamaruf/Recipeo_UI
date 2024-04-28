@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:recipeo/Utilities/Others/colors.dart';
 
-class LoginCustomInputField extends StatelessWidget {
-  LoginCustomInputField({super.key,
+class InputTextField extends StatelessWidget {
+  InputTextField({
+    super.key,
     required this.controller,
     required this.hintText,
     this.suffixWidget,
     this.prefixIcon,
     this.keyboardType = TextInputType.text,
-    this.obscureText=false,
+    this.obscureText = false,
     this.validator,
     this.onChanged,
     this.color = const Color(0xffced5d6),
@@ -24,11 +25,11 @@ class LoginCustomInputField extends StatelessWidget {
   Widget? prefixIcon;
   final TextInputType keyboardType;
   final bool obscureText;
-  String? Function(String?) ? validator;
-  Function(Object) ? onChanged;
+  String? Function(String?)? validator;
+  Function(Object)? onChanged;
   final Color color;
   double hintFontSize;
-  int ? maxChar;
+  int? maxChar;
 
   @override
   Widget build(BuildContext context) {
@@ -51,12 +52,17 @@ class LoginCustomInputField extends StatelessWidget {
         filled: true,
         fillColor: AppColor.white,
         hintText: hintText,
-        hintStyle: const TextStyle(fontSize: 15, fontFamily: 'Inter',),
+        hintStyle: const TextStyle(
+          fontSize: 15,
+          fontFamily: 'Inter',
+        ),
         errorStyle: const TextStyle(fontSize: 10, fontFamily: "Inter"),
-        border: OutlineInputBorder( borderSide: BorderSide(color: Colors.grey.shade300 ),
+        border: OutlineInputBorder(
+          borderSide: BorderSide(color: Colors.grey.shade300),
           borderRadius: BorderRadius.circular(30),
         ),
-        contentPadding: const EdgeInsets.symmetric(vertical: 15,horizontal: 15),
+        contentPadding:
+            const EdgeInsets.symmetric(vertical: 15, horizontal: 15),
         suffixIcon: suffixWidget,
         prefixIcon: prefixIcon,
       ),

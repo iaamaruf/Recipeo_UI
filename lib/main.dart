@@ -6,6 +6,7 @@ import 'package:recipeo/Screens/reset_password.dart';
 import 'package:recipeo/Screens/sign_up.dart';
 import 'package:recipeo/Screens/get_start_screen.dart';
 import 'package:recipeo/Screens/verify_OTP.dart';
+import 'package:recipeo/Utilities/app_themes.dart';
 
 
 void main() {
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Recipeo App',
+      theme: AppTheme.defaultTheme,
       initialRoute: GetStartScreen.routeName,
       routes: {
         GetStartScreen.routeName : (context)=> const GetStartScreen(),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:recipeo/Screens/login_screen.dart';
-import 'package:recipeo/Utilities/Button/default_button.dart';
-import 'package:recipeo/Utilities/Form%20field/sign_in_custom_formfield.dart';
+import 'package:recipeo/Utilities/Form%20field/Input_formfield.dart';
 
 class ResetPasswordScreen extends StatefulWidget {
   static const String routeName = "ResetPasswordScreen";
@@ -46,7 +45,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children:[
-                      LoginCustomInputField(
+                      InputTextField(
                         controller: passwordTextController,
                         validator: (value) {
                           if(value!.isEmpty){
@@ -154,17 +153,32 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
               ),
             ),
             const SizedBox(height: 40,),
+            // Padding(
+            //   padding: const EdgeInsets.only(left: 10.0, right: 10, bottom: 10),
+            //   child: Center(
+            //     child: DefaultButton(
+            //       paddingBottom: 15,
+            //       paddingTop: 15,
+            //       buttonText: "Done",
+            //       onTap: (){
+            //         Navigator.of(context).pushNamed(LogInScreen.routeName);
+            //       },
+            //     ),
+            //   ),
+            // ),
             Padding(
-              padding: const EdgeInsets.only(left: 10.0, right: 10, bottom: 10),
-              child: Center(
-                child: DefaultButton(
-                  paddingBottom: 15,
-                  paddingTop: 15,
-                  buttonText: "Done",
-                  onTap: (){
-                    Navigator.of(context).pushNamed(LogInScreen.routeName);
+              padding: const EdgeInsets.only(left: 15.0,right: 15.0),
+              child: SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  child: const Text('Get Start', style: TextStyle(fontSize: 18),),
+                  onPressed: () {
+                    onTap: () {
+                      Navigator.of(context).pushNamed(LogInScreen.routeName);
+                    };
                   },
                 ),
+
               ),
             ),
 

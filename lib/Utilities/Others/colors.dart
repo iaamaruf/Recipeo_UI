@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppColor{
   static Color lightBlue = const Color(0xff120a8f);
-  static Color ButtontColor  = const Color(0xff1FCC79);
+  static Color ButtontColor  = const Color(0xff1FCC71);
   static Color defaultColor  = const Color(0xFF395676);
 
 
@@ -17,6 +17,7 @@ class AppColor{
   static Color newButtonColor = const Color(0xff4646b6);
   static Color newBlue = const Color(0xff568AF1);
   static Color defaultButtonColor  = const Color(0xFF4646B6);
+  static Color red = const Color(0xffFF0000);
 
 
 
@@ -54,7 +55,7 @@ class AppColor{
   static Color backButtonColor = const Color(0xffDC143C);
   static Color okButtonColor = const Color(0xff008B8B);
   static Color textFieldHeadingColor = const Color(0xff1CAB89);
-  static Color red = const Color(0xffFF0000);
+
   static Color textColor = const Color(0xff051036);
   static Color hintTextColor = const Color(0xffA3A3A3);
   static Color green = const Color(0xff027300);

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:recipeo/Screens/reset_password.dart';
-import 'package:recipeo/Utilities/Button/default_button.dart';
+import 'package:recipeo/Screens/login_screen.dart';
 import 'package:recipeo/Utilities/Others/colors.dart';
 
 class PasswordVerificationCodeScreen extends StatefulWidget {
@@ -116,27 +115,40 @@ class _PasswordVerificationCodeScreenState extends State<PasswordVerificationCod
 
             ),
             const SizedBox(height: 40,),
+            // Padding(
+            //   padding: const EdgeInsets.only(left: 10.0, right: 10, bottom: 10),
+            //   child: Center(
+            //     child: DefaultButton(
+            //       paddingBottom: 15,
+            //       paddingTop: 15,
+            //       buttonText: "Next",
+            //       onTap: (){
+            //         Navigator.of(context).pushNamed(ResetPasswordScreen.routeName);
+            //       },
+            //     ),
+            //   ),
+            // ),
             Padding(
-              padding: const EdgeInsets.only(left: 10.0, right: 10, bottom: 10),
-              child: Center(
-                child: DefaultButton(
-                  paddingBottom: 15,
-                  paddingTop: 15,
-                  buttonText: "Next",
-                  onTap: (){
-                    Navigator.of(context).pushNamed(ResetPasswordScreen.routeName);
+              padding: const EdgeInsets.only(left: 15.0,right: 15.0),
+              child: SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  child: const Text('Verify', style: TextStyle(fontSize: 18),),
+                  onPressed: () {
+                      Navigator.of(context).pushNamed(LogInScreen.routeName);
                   },
                 ),
+
               ),
             ),
-            const SizedBox(height: 15),
+            const SizedBox(height: 20),
             Padding(
-              padding: const EdgeInsets.only(left: 30.0, right: 30),
+              padding: const EdgeInsets.only(left: 15.0, right: 15),
               child: Container(
-                height: 55,
+                height: 50,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30),
+                    borderRadius: BorderRadius.circular(35),
                     color: AppColor.white,
                     border: Border.all(color: Colors.grey)
                 ),

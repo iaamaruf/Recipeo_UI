@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:recipeo/Screens/login_screen.dart';
-import 'package:recipeo/Utilities/Button/default_button.dart';
 import 'package:recipeo/Utilities/Others/colors.dart';
 
 class VerifyOtpScreen extends StatefulWidget {
@@ -117,27 +116,40 @@ class _VerifyOtpScreenState extends State<VerifyOtpScreen> {
 
             ),
             const SizedBox(height: 40,),
+            // Padding(
+            //   padding: const EdgeInsets.only(left: 10.0, right: 10, bottom: 10),
+            //   child: Center(
+            //     child: DefaultButton(
+            //       paddingBottom: 15,
+            //       paddingTop: 15,
+            //       buttonText: "Verify",
+            //       onTap: (){
+            //         Navigator.of(context).pushNamed(LogInScreen.routeName);
+            //       },
+            //     ),
+            //   ),
+            // ),
             Padding(
-              padding: const EdgeInsets.only(left: 10.0, right: 10, bottom: 10),
-              child: Center(
-                child: DefaultButton(
-                  paddingBottom: 15,
-                  paddingTop: 15,
-                  buttonText: "Verify",
-                  onTap: (){
-                    Navigator.of(context).pushNamed(LogInScreen.routeName);
+              padding: const EdgeInsets.only(left: 15.0,right: 15.0),
+              child: SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  child: const Text('Next', style: TextStyle(fontSize: 18),),
+                  onPressed: () {
+                      Navigator.of(context).pushNamed(LogInScreen.routeName);
                   },
                 ),
+
               ),
             ),
             const SizedBox(height: 15),
             Padding(
-              padding: const EdgeInsets.only(left: 30.0, right: 30),
+              padding: const EdgeInsets.only(left: 15.0, right: 15),
               child: Container(
-                height: 55,
+                height: 50,
                 width: double.infinity,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30),
+                  borderRadius: BorderRadius.circular(35),
                   color: AppColor.white,
                   border: Border.all(color: Colors.grey)
                 ),
@@ -148,6 +160,7 @@ class _VerifyOtpScreenState extends State<VerifyOtpScreen> {
 
               ),
             )
+
 
           ],
         ),
